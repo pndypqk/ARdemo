@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="assets/lib/aframe/aframe-v1.4.2.min.js"></script>
+    <script src="assets/lib/aframe/aframe-rounded-component.min.js"></script>
+    <script src="assets/lib/arjs/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene
+      embedded
+      arjs="cameraParametersUrl: assets/data/camera_para.dat;"
+      embedded=""
+      vr-mode-ui="enabled: false;"
+    >
+      <a-assets>
+        <a-asset-item
+          id="main"
+          src="assets/models/guiji-standalone.gltf"
+        ></a-asset-item>
+      </a-assets>
+      <a-marker url="assets/data/marker/hiro.patt" type="pattern">
+        <a-entity id="models" rotation="-90 0 0">
+          <a-entity id="lines">
+            <a-entity
+              id="line1"
+              line="start: -0.33 0.56 0; end: -0.26 0.56 0; color: #2969bc"
+            ></a-entity>
+    
+            <a-entity
+              id="line2"
+              line="start: 0 1.47 -0.02; end: 0.41 1.53 0; color: #2969bc"
+            ></a-entity>
+    
+            <a-entity
+              id="line3"
+              line="start: 0 1.43 -0.02; end: 0.41 1.4 0; color: #2969bc"
+            ></a-entity>
+    
+            <a-entity
+              id="line4"
+              position="0 0 0.04"
+              line="start: 0 1.28 -0.03; end: 0.41 1.23 0.06; color: #2969bc"
+            ></a-entity>
+    
+            <a-entity
+              id="line5"
+              position="0 0 0"
+              line="start: 0 0.83 0.05; end: 0.4 0.95 0.27; color: #2969bc"
+            ></a-entity>
+    
+            <a-entity
+              id="line6"
+              line="start: 0 0.77 0.02; end: 0.4 0.75 0.27; color: #2969bc"
+            ></a-entity>
+    
+            <a-entity
+              id="line7"
+              line="start: -0.17 0.73 0.16; end: 0.28 0.74 0.639; color: #2969bc"
+            ></a-entity>
+    
+            <a-entity
+              id="line8"
+              line="start: 0 0.22 0; end: 0.45 0.2 0.27; color: #2969bc"
+            ></a-entity>
+          </a-entity>
+    
+          <a-entity id="info">
+            <a-rounded
+              id="box1"
+              rounded="color: #302c2c; height: 1.57; width: 0.82; opacity: 0.32"
+              position="-1.15838 -0.08086 0"
+              width="0.5"
+              height="0.5"
+              radius="0.05"
+            >
+              <a-text
+                id="updateMe"
+                position="0.38564 1.5023 0"
+                text="value: 自助值机柜机; font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2.5"
+                value="Hello, 12你好世界!"
+                color="red"
+                font="#myfont"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text2"
+                position="0.31529 1.38872 0"
+                text="value: 设备型号: AD900F; font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                xposition="-1 1.88265 0"
+                value="Hello, 12你好世界!"
+                color="red"
+                font="#myfont"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text3"
+                position="0.40179 1.03293 0"
+                text="value: 生产日期: 2015年1月1日; font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text4"
+                position="0.17783 1.27256 0"
+                text="value: 设备状态:;; font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text5"
+                position="0.41334 1.26765 0"
+                text="value: 异常;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #da0707; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text6"
+                position="0.34328 1.15375 0"
+                text="value: 设备尺寸: 1380*600; font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text7"
+                position="0.28716 0.91455 0"
+                text="value: 设备管理员: 老王;  font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text8"
+                position="0.17686 0.79112 0"
+                text="value: 设备功能:;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text9"
+                position="0.35707 0.67263 0"
+                text="value: 1、旅客身份认证;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+              <a-text
+                id="text10"
+                position="0.35414 0.56203 0"
+                text="value: 2、航班信息确认;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text10-1"
+                position="0.29323 0.44664 0"
+                text="value: 3、航班值机;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text11"
+                position="0.32629 0.33543 0"
+                text="value: 4、打印登机牌;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text12"
+                position="0.32744 0.21449 0"
+                text="value: 5、打印行李牌;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+    
+              <a-text
+                id="text13"
+                position="0.40363 0.09294 0"
+                text="value: 上一次使用: 2022年9月1日; font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                align="center"
+              ></a-text>
+            </a-rounded>
+    
+            <a-entity id="component-texts" xrounded="enabled: true; opacity: 0">
+              <a-rounded
+                id="box2"
+                position="0.41215 1.48693 0"
+                rounded="height: 0.09; width: 0.48; radius: 0.03; opacity: 0.5; color: #1fdb4e"
+              >
+                <a-text
+                  id="text14"
+                  position="0.23403 0.05552 0"
+                  text="value: 状态指示灯;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #ffffff; wrapCount: 50; width: 2; lineHeight: 0; letterSpacing: 0; height: 0; alphaTest: 0.53"
+                  align="center"
+                ></a-text>
+              </a-rounded>
+    
+              <a-rounded
+                id="box3"
+                position="0.41215 1.35267 0"
+                rounded="height: 0.09; width: 0.48; radius: 0.03; opacity: 0.5; color: #1895e2"
+              >
+                <a-text
+                  id="text15"
+                  position="0.23604 0.0529 0"
+                  text="value: 人脸识别模块; font: assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+              </a-rounded>
+    
+              <a-rounded
+                id="box4"
+                position="0.41215 1.06564 0.09832"
+                rounded="height: 0.24; width: 0.65; radius: 0.03; opacity: 0.5; color: #1fdb4e"
+              >
+                <a-text
+                  id="text16"
+                  position="0.23538 0.16928 0"
+                  text="value: 交互触摸屏;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+                <a-text
+                  id="text17"
+                  position="0.32158 0.07402 0"
+                  text="value: 分辨率:1024*768;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+              </a-rounded>
+    
+              <a-rounded
+                id="box6"
+                position="0.40817 0.90808 0.27"
+                rounded="height: 0.09; width: 0.48; radius: 0.03; opacity: 0.5; color: #1895e2"
+              >
+                <a-text
+                  id="text18"
+                  position="0.26177 0.05097 0"
+                  text="value: 银联支付模块;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+              </a-rounded>
+    
+              <a-rounded
+                id="box7"
+                position="0.40441 0.66489 0.27"
+                rounded="height: 0.19; width: 0.89; radius: 0.03; opacity: 0.5; color: #1fdb4e"
+              >
+                <a-text
+                  id="text19"
+                  position="0.26923 0.14769 0"
+                  text="value: 登机凭证出口;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+                <a-text
+                  id="text20"
+                  position="0.44864 0.06189 0"
+                  text="value: (登机牌、行李条、提取联);  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+              </a-rounded>
+    
+              <a-rounded
+                id="box9"
+                position="0.28789 0.69253 0.63943"
+                rounded="height: 0.09; width: 0.48; radius: 0.03; opacity: 0.5; color: #1895e2; topLeftRadius: -1"
+              >
+                <a-text
+                  id="text21"
+                  position="0.2322 0.05186 0"
+                  text="value: 证件扫描区;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+              </a-rounded>
+    
+              <a-rounded
+                id="box10"
+                position="0.45631 0.13401 0.27"
+                rounded="height: 0.09; width: 0.48; radius: 0.03; opacity: 0.5; color: #1895e2"
+              >
+                <a-text
+                  id="text22"
+                  position="0.21812 0.05511 0"
+                  text="value: 主机机身;  font:assets/fonts/custom-msdf.json; negate: false; transparent: true; side: double; whiteSpace: normal; color: #eee7e7; wrapCount: 50; width: 2"
+                  align="center"
+                ></a-text>
+              </a-rounded>
+            </a-entity>
+    
+            <a-entity
+              text-geometry="value: 你好世界; font: #simsun; side: double"
+              material="color: #a0a040;  repeat: 0.5 0.5;"
+              xrotation="-90 0 0"
+            >
+            </a-entity>
+            <a-entity
+              id="gugiji"
+              position="0 0 -0.03595"
+              gltf-model="#main"
+            ></a-entity>
+          </a-entity>
+          <a-entity id="rig" position="0 2 4">
+            <a-entity id="camera" camera look-controls></a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
